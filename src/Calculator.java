@@ -61,8 +61,98 @@ public class Calculator implements ActionListener{
             beqq=new Button("=");
             beqq.addActionListener(this);
 
-            bclear=new Button("Clear");
+            bclear=new Button("CLR");
             bclear.addActionListener(this);
 
+            t1 = new TextField(20);
+            f.add(t1);
+
+            G =new GridLayout(4,4);
+            P.setLayout(G);
+
+            P.add(b0);
+            P.add(b1);
+            P.add(b2);
+            P.add(b3);
+            P.add(b4);
+            P.add(b5);
+            P.add(b6);
+            P.add(b7);
+            P.add(b8);
+            P.add(b9);
+            P.add(bsub);
+            P.add(badd);
+            P.add(bmult);
+            P.add(bdvd);
+            P.add(bclear);
+            P.add(beqq);
+
+            f.add(P);
+            f.setSize(200,180);
+            f.setVisible(true);
+            f.setBackground(Color.lightGray);
+            f.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosing(WindowEvent e) {
+                    System.exit(0);
+                }
+            });
         }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==b0){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        }
+        if(e.getSource()==b1){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        }
+        if(e.getSource()==b2){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b3){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b4){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b5){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b6){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b7){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b8){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        } if(e.getSource()==b9){
+            s3=t1.getText();
+            s4="0";
+            s5=s3+s4;
+            t1.setText(s5);
+        }
+    }
 }
