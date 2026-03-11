@@ -109,50 +109,71 @@ public class Calculator implements ActionListener{
         }
         if(e.getSource()==b1){
             s3=t1.getText();
-            s4="0";
+            s4="1";
             s5=s3+s4;
             t1.setText(s5);
         }
         if(e.getSource()==b2){
             s3=t1.getText();
-            s4="0";
+            s4="2";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b3){
             s3=t1.getText();
-            s4="0";
+            s4="3";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b4){
             s3=t1.getText();
-            s4="0";
+            s4="4";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b5){
             s3=t1.getText();
-            s4="0";
+            s4="5";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b6){
             s3=t1.getText();
-            s4="0";
+            s4="6";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b7){
             s3=t1.getText();
-            s4="0";
+            s4="7";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b8){
             s3=t1.getText();
-            s4="0";
+            s4="8";
             s5=s3+s4;
             t1.setText(s5);
         } if(e.getSource()==b9){
             s3=t1.getText();
-            s4="0";
+            s4="9";
             s5=s3+s4;
             t1.setText(s5);
         }
+        if(e.getSource()==badd){
+            s1=t1.getText();
+            t1.setText("");
+            p=1;
+        }
+        if(e.getSource()==bsub){
+            s1=t1.getText();
+            t1.setText("");
+            p=2;
+        }
+        if(e.getSource()==bmult){
+            s1=t1.getText();
+            t1.setText("");
+            p=3;
+        }
+        if(e.getSource()==bdvd){
+            s1=t1.getText();
+            t1.setText("");
+            p=4;
+        }
+
     }
 }
