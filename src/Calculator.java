@@ -2,16 +2,16 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public class Calculator implements ActionListener{
-        int p,z;
-        String s1,s2,s3,s4,s5;
-        Frame f;
-        Button b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,badd,bsub,bdvd,bmult,beqq,bclear;
-        Panel P;
-        TextField t1;
-        GridLayout G;
+public class Calculator implements ActionListener {
+    int p, z;
+    String s1, s2, s3, s4, s5;
+    Frame f;
+    Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, badd, bsub, bdvd, bmult, beqq, bclear;
+    Panel P;
+    TextField t1;
+    GridLayout G;
 
-        calculator(){
+    Calculator(){
             f=new Frame("Calculator");
             f.setLayout(new FlowLayout());
             P=new Panel();
@@ -67,7 +67,7 @@ public class Calculator implements ActionListener{
             t1 = new TextField(20);
             f.add(t1);
 
-            G =new GridLayout(4,4);
+            G =new GridLayout(5,4);
             P.setLayout(G);
 
             P.add(b0);
@@ -174,6 +174,34 @@ public class Calculator implements ActionListener{
             t1.setText("");
             p=4;
         }
+        if (e.getSource()==beqq){
+            s2=t1.getText();
 
+            if(p==1){
+                z=Integer.parseInt(s1)+Integer.parseInt(s2);
+            }
+
+            if(p==2){
+                z=Integer.parseInt(s1)-Integer.parseInt(s2);
+            }
+
+            if(p==3){
+                z=Integer.parseInt(s1)*Integer.parseInt(s2);
+            }
+
+            if(p==4){
+                z=Integer.parseInt(s1)/Integer.parseInt(s2);
+            }
+
+            t1.setText(String.valueOf(z));
+        }
+        if(e.getSource()==bclear){
+            t1.setText("");
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Calculator cal=new Calculator();
     }
 }
